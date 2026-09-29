@@ -1,0 +1,129 @@
+@import 'tailwindcss';
+
+*, *::before, *::after {
+  cursor: none !important;
+}
+
+:root {
+  --panel-w: 384px;
+  --app-h: 100dvh;
+  --fs-nav: 12px;
+  --fs-llm-title: 22px;
+  --fs-llm: 15px;
+  --color-panel: #f9f9f9;
+  --color-rule: #e3e3e3;
+  --color-ink: #202020;
+  --color-ink-body: #202020;
+  --color-ink-mute: #7c7c7c;
+}
+
+.bg-panel { background-color: var(--color-panel); }
+.border-rule { border-color: var(--color-rule); }
+.text-ink { color: var(--color-ink); }
+.text-ink-body { color: var(--color-ink-body); }
+.text-ink-mute { color: var(--color-ink-mute); }
+
+.meta {
+  font-family: "DM Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: -0.07px;
+  line-height: 1.2;
+}
+
+.thread-scroll { scrollbar-width: thin; }
+.thread-scroll::-webkit-scrollbar { width: 6px; }
+.thread-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-rule);
+  border-radius: 999px;
+}
+
+.pad-safe-b {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+[data-no-select] {
+  user-select: none;
+}
+
+body[data-llm-open="true"] {
+  overflow: hidden;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translate(-50%, calc(-100% - 4px)); }
+  to   { opacity: 1; transform: translate(-50%, calc(-100% - 8px)); }
+}
+
+@font-face {
+  font-family: 'DM Mono:Medium';
+  src: url('https://static.figma.com/font/DMMono-Medium_1') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'DM Mono:Regular';
+  src: url('https://static.figma.com/font/DMMono-Regular_1') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'DM Sans:Medium';
+  src: url('https://static.figma.com/font/DMSans_opsz_wght__1') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'DM Sans:Regular';
+  src: url('https://static.figma.com/font/DMSans_opsz_wght__1') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'DM Sans:SemiBold';
+  src: url('https://static.figma.com/font/DMSans_opsz_wght__1') format('woff2');
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Noto Sans Math:Regular';
+  src: url('https://static.figma.com/font/NotoSansMath-Regular_1') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Noto Sans Symbols2:Regular';
+  src: url('https://static.figma.com/font/NotoSansSymbols2-Regular_5') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Noto Sans Symbols:Medium';
+  src: url('https://static.figma.com/font/NotoSansSymbols-VF_2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Noto Sans:Medium';
+  src: url('https://static.figma.com/font/NotoSans-VF_3') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@theme {
+
+  --color-accent: #e65f2e; /* orange (230,95,46) */
+  --color-accent-soft: #f5dacf; /* peach  (245,218,208) */
+}
+
+::selection {
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+}
