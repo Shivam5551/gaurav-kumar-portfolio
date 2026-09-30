@@ -72,22 +72,7 @@ const groupLabel: Variants = {
     },
 };
 
-function AnimatedLink({ children }: { children: React.ReactNode }) {
-    return (
-        <span className="relative inline-block cursor-pointer group font-['DM_Mono:Medium'] text-black tracking-[-0.4px]">
-            {children}
-            <motion.span
-                className="absolute left-0 -bottom-[1px] h-[1px] bg-black origin-left"
-                initial={{ scaleX: 0 }}
-                whileHover={{ scaleX: 1 }}
-                animate={{ scaleX: 0 }}
-                whileInView={undefined}
-                style={{ width: "100%" }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
-            />
-        </span>
-    );
-}
+
 
 export default function AboutPage() {
     const reduce = useReducedMotion();

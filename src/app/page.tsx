@@ -42,7 +42,7 @@ const workItemVariant: Variants = {
 
 function WorkItemCaption() {
     return (
-        <div className="block md:flex items-center justify-between gap-8 text-[17px] tracking-[-0.085px] uppercase w-full overflow-hidden">
+        <div className="block md:flex items-center justify-between gap-8 text-[15px] tracking-[-0.085px] uppercase w-full overflow-hidden">
             <p
                 className="font-['DM_Sans:Medium'] font-medium leading-[1.2] text-black whitespace-nowrap truncate min-w-0"
                 style={{ fontVariationSettings: '"opsz" 14' }}
@@ -50,9 +50,7 @@ function WorkItemCaption() {
                 {`The future of AI & hardware`}
             </p>
             <div className="flex font-['DM_Mono:Regular'] pt-[8px] md:pt-0 justify-between items-center text-[#454545] shrink-0 whitespace-nowrap">
-                <span className="leading-[1.2] inline">
-                    Openai X Hardware
-                </span>
+                <span className="leading-[1.2] inline">Openai X Hardware</span>
                 <ul className="block leading-[0] block">
                     <li className="list-disc ms-[22px]">
                         <span className="leading-[1.2]">​</span>
@@ -65,7 +63,7 @@ function WorkItemCaption() {
 }
 
 const experience = [
-    { year: "2025", company: "WAL+L", role: "Product & UX/UI Designer" },
+    { year: "2025", company: "WAL+L", role: "UX/UI Designer" },
     { year: "2024", company: "Sotbella", role: "UX/UI Designer" },
     { year: "2024", company: "Nexgen", role: "UX/UI Designer" },
     { year: "2022", company: "Vestaso", role: "Junior UX/UI Designer" },
@@ -139,8 +137,8 @@ export default function Home() {
                                         </div>
                                     </div>
 
-                                    <div className="hidden sm:flex items-center justify-between w-full">
-                                        <div className="flex gap-12 lg:gap-[84px] items-center">
+                                    <div className="hidden sm:flex text-[16px] items-center w-full">
+                                        <div className="gap-12 lg:gap-[84px] items-center">
                                             <span
                                                 className="font-['DM_Sans:Regular'] font-normal text-[#454545] shrink-0"
                                                 style={{
@@ -150,8 +148,10 @@ export default function Home() {
                                             >
                                                 {year}
                                             </span>
+                                        </div>
+                                        <div className="grid grid-cols-12 w-full pl-[84px]">
                                             <span
-                                                className="font-['DM_Sans:Medium'] font-medium text-black"
+                                                className="font-['DM_Sans:Medium'] col-span-6 font-medium text-black"
                                                 style={{
                                                     fontVariationSettings:
                                                         '"opsz" 14',
@@ -159,16 +159,16 @@ export default function Home() {
                                             >
                                                 {company}
                                             </span>
+                                            <span
+                                                className="font-['DM_Sans:Regular'] col-span-6 font-normal text-[#454545] text-start"
+                                                style={{
+                                                    fontVariationSettings:
+                                                        '"opsz" 14',
+                                                }}
+                                            >
+                                                {role}
+                                            </span>
                                         </div>
-                                        <span
-                                            className="font-['DM_Sans:Regular'] font-normal text-[#454545] text-right"
-                                            style={{
-                                                fontVariationSettings:
-                                                    '"opsz" 14',
-                                            }}
-                                        >
-                                            {role}
-                                        </span>
                                     </div>
                                 </motion.div>
                             </div>

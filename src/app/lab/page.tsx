@@ -54,29 +54,42 @@ const captionLine: Variants = {
         },
     }),
 };
+
 function PostCaption() {
     return (
-        <div className="block md:flex items-center justify-between gap-8 text-[17px] tracking-[-0.085px] uppercase w-full overflow-hidden">
-            <p
-                className="font-['DM_Sans:Medium'] font-medium leading-[1.2] text-black whitespace-nowrap truncate min-w-0"
+        <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.6 }}
+            className="flex flex-col gap-[10px] sm:gap-[14px] text-[#202020] text-[15px] lg:text-[17px] tracking-[-0.085px] uppercase w-full"
+        >
+            <motion.p
+                custom={0}
+                variants={captionLine}
+                className="font-['DM_Sans:Medium'] font-medium leading-[1.2] whitespace-nowrap truncate"
                 style={{ fontVariationSettings: '"opsz" 14' }}
             >
                 {`The future of AI & hardware`}
-            </p>
-            <div className="flex font-['DM_Mono:Regular'] pt-[8px] md:pt-0 justify-between items-center text-[#454545] shrink-0 whitespace-nowrap">
+            </motion.p>
+            <motion.div
+                custom={1}
+                variants={captionLine}
+                className="flex font-['DM_Mono:Regular'] items-center text-[#454545] whitespace-nowrap"
+            >
                 <span className="leading-[1.2] inline">
                     Openai X Hardware
                 </span>
                 <ul className="block leading-[0] block">
-                    <li className="list-disc ms-[22px]">
+                    <li className="list-disc ms-[20px]">
                         <span className="leading-[1.2]">​</span>
                     </li>
                 </ul>
                 <span className="leading-[1.2]">Concept 2025</span>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     );
 }
+
 
 // Aspect ratios approximating original heights (col x item)
 // Original heights: 606, 550, 401
