@@ -5,7 +5,7 @@ export function GaurvallmButton({ isOpen, onClick }: { isOpen: boolean; onClick:
     return (
         <button
             onClick={onClick}
-            className={`bg-[#E65F2E] aspect-[1/1] ${isOpen ? 'hidden' : 'block'} rounded-full sm:hidden text-white h-[54px] w-[54px] absolute bottom-[20px] right-[20px] hover:bg-[#e65f2e]/90 transition-colors duration-200`}
+            className={`bg-[#E65F2E] aspect-[1/1] ${isOpen ? 'hidden' : 'block'} shadow-lg z-20 rounded-full md:hidden text-white h-[54px] w-[54px] absolute bottom-[20px] right-[20px] hover:bg-[#e65f2e]/90 transition-colors duration-200`}
         >
             <svg
                 width="54"

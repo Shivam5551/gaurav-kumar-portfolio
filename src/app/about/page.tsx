@@ -241,7 +241,7 @@ export default function AboutPage() {
             </section>
 
             {/* Photo galleries */}
-            <section className="px-5 sm:px-8 lg:px-[34px] pb-[64px]">
+            <section className="px-[24px] lg:px-[34px] pb-[64px]">
                 <div className="flex flex-col gap-8 sm:gap-[44px]">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-[44px]">
                         <PhotoGroup

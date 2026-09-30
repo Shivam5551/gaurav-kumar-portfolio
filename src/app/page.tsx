@@ -42,18 +42,18 @@ const workItemVariant: Variants = {
 
 function WorkItemCaption() {
     return (
-        <div className="flex items-start sm:items-center justify-between gap-3 text-[13px] sm:text-[15px] lg:text-[17px] tracking-[-0.085px] uppercase w-full overflow-hidden">
+        <div className="block md:flex items-center justify-between gap-8 text-[17px] tracking-[-0.085px] uppercase w-full overflow-hidden">
             <p
                 className="font-['DM_Sans:Medium'] font-medium leading-[1.2] text-black whitespace-nowrap truncate min-w-0"
                 style={{ fontVariationSettings: '"opsz" 14' }}
             >
                 {`The future of AI & hardware`}
             </p>
-            <div className="flex font-['DM_Mono:Regular'] items-center text-[#454545] shrink-0 whitespace-nowrap">
-                <span className="leading-[1.2] hidden sm:inline">
+            <div className="flex font-['DM_Mono:Regular'] pt-[8px] md:pt-0 justify-between items-center text-[#454545] shrink-0 whitespace-nowrap">
+                <span className="leading-[1.2] inline">
                     Openai X Hardware
                 </span>
-                <ul className="block leading-[0] hidden sm:block">
+                <ul className="block leading-[0] block">
                     <li className="list-disc ms-[22px]">
                         <span className="leading-[1.2]">​</span>
                     </li>
@@ -79,7 +79,7 @@ export default function Home() {
     return (
         <div className="bg-[#fcfdfe] min-h-screen flex flex-col">
             {/* Hero */}
-            <section className="mt-[64px] lg:mt-[89px] pt-12 sm:pt-20 lg:pt-[144px] pb-8 lg:pb-[34px] px-5 sm:px-8 lg:px-[34px]">
+            <section className="mt-[64px] lg:mt-[89px] pt-12 sm:pt-20 lg:pt-[144px] pb-8 lg:pb-[34px] px-5 lg:px-[34px]">
                 <div className="grid grid-cols-1 lg:grid-cols-2 items-start lg:items-end justify-between gap-10 lg:gap-8">
                     <motion.h1
                         initial="hidden"
@@ -178,10 +178,10 @@ export default function Home() {
             </section>
 
             {/* Work Grid */}
-            <section className="px-5 sm:px-8 lg:px-[34px] pb-[64px] flex-1">
+            <section className="px-[24px] lg:px-[34px] pb-[64px] flex-1">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-[12px] sm:gap-[16px]">
                     {/* Left column */}
-                    <div className="flex flex-col gap-[12px] sm:gap-[16px]">
+                    <div className="flex flex-col gap-[28px] sm:gap-[16px]">
                         {[imgWorkItem6, imgWorkItem5, imgWorkItem4].map(
                             (src, i) => (
                                 <motion.div

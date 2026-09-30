@@ -44,8 +44,8 @@ export default function AppShell({ children }: { children: ReactNode }) {
                 pendingSelection={pendingSelection}
             />
 
-            <GaurvallmButton isOpen={llmOpen} onClick={() => setLlmOpen(true)} />
-
+            <div className="fixed bottom-4 right-4"><GaurvallmButton isOpen={llmOpen} onClick={() => setLlmOpen(true)} />
+</div>
             <CursorEffects onOpenLLM={handleOpenLLM} />
         </div>
     );

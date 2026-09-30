@@ -54,39 +54,27 @@ const captionLine: Variants = {
         },
     }),
 };
-
 function PostCaption() {
     return (
-        <motion.div
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.6 }}
-            className="flex flex-col gap-[10px] sm:gap-[14px] text-[#202020] text-[13px] sm:text-[15px] lg:text-[17px] tracking-[-0.085px] uppercase w-full"
-        >
-            <motion.p
-                custom={0}
-                variants={captionLine}
-                className="font-['DM_Sans:Medium'] font-medium leading-[1.2] whitespace-nowrap truncate"
+        <div className="block md:flex items-center justify-between gap-8 text-[17px] tracking-[-0.085px] uppercase w-full overflow-hidden">
+            <p
+                className="font-['DM_Sans:Medium'] font-medium leading-[1.2] text-black whitespace-nowrap truncate min-w-0"
                 style={{ fontVariationSettings: '"opsz" 14' }}
             >
                 {`The future of AI & hardware`}
-            </motion.p>
-            <motion.div
-                custom={1}
-                variants={captionLine}
-                className="flex font-['DM_Mono:Regular'] items-center text-[#454545] whitespace-nowrap"
-            >
-                <span className="leading-[1.2] hidden sm:inline">
+            </p>
+            <div className="flex font-['DM_Mono:Regular'] pt-[8px] md:pt-0 justify-between items-center text-[#454545] shrink-0 whitespace-nowrap">
+                <span className="leading-[1.2] inline">
                     Openai X Hardware
                 </span>
-                <ul className="block leading-[0] hidden sm:block">
-                    <li className="list-disc ms-[20px]">
+                <ul className="block leading-[0] block">
+                    <li className="list-disc ms-[22px]">
                         <span className="leading-[1.2]">​</span>
                     </li>
                 </ul>
                 <span className="leading-[1.2]">Concept 2025</span>
-            </motion.div>
-        </motion.div>
+            </div>
+        </div>
     );
 }
 
@@ -102,7 +90,7 @@ export default function LabPage() {
     return (
         <div className="bg-[#fcfdfe] min-h-screen flex flex-col">
             {/* Intro */}
-            <section className="mt-[64px] lg:mt-[89px] px-5 sm:px-8 lg:px-[34px] py-14 sm:py-20 lg:py-[100px]">
+            <section className="mt-[64px] lg:mt-[89px]  lg:px-[34px] px-[24px] py-[24px] lg:py-[100px]">
                 <motion.div
                     initial="hidden"
                     animate="show"
