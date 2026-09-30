@@ -49,7 +49,7 @@ function WorkItemCaption() {
             >
                 {`The future of AI & hardware`}
             </p>
-            <div className="flex font-['DM_Mono:Regular'] pt-[8px] md:pt-0 justify-between items-center text-[#454545] shrink-0 whitespace-nowrap">
+            <div className="flex font-['DM_Mono:Regular'] pt-[8px] md:pt-0 justify-start sm:justify-between items-center text-[#454545] shrink-0 whitespace-nowrap">
                 <span className="leading-[1.2] inline">Openai X Hardware</span>
                 <ul className="block leading-[0] block">
                     <li className="list-disc ms-[22px]">
@@ -179,9 +179,9 @@ export default function Home() {
 
             {/* Work Grid */}
             <section className="px-[24px] lg:px-[34px] pb-[64px] flex-1">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-[12px] sm:gap-[16px]">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-[28px] sm:gap-[16px]">
                     {/* Left column */}
-                    <div className="flex flex-col gap-[28px] sm:gap-[16px]">
+                    <div className="flex flex-col !gap-[28px]">
                         {[imgWorkItem6, imgWorkItem5, imgWorkItem4].map(
                             (src, i) => (
                                 <motion.div
@@ -215,7 +215,7 @@ export default function Home() {
                         )}
                     </div>
                     {/* Right column */}
-                    <div className="flex flex-col gap-[12px] sm:gap-[16px]">
+                    <div className="flex flex-col !gap-[28px]">
                         {[imgWorkItem3, imgWorkItem2, imgWorkItem1].map(
                             (src, i) => (
                                 <motion.div

@@ -61,7 +61,7 @@ function PostCaption() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.6 }}
-            className="flex flex-col gap-[10px] sm:gap-[14px] text-[#202020] text-[15px] lg:text-[17px] tracking-[-0.085px] uppercase w-full"
+            className="flex flex-col gap-[8px] text-[#202020] text-[15px] lg:text-[17px] tracking-[-0.085px] uppercase w-full"
         >
             <motion.p
                 custom={0}
@@ -138,7 +138,7 @@ export default function LabPage() {
                     whileInView="show"
                     viewport={{ once: true, amount: 0.1 }}
                     variants={container}
-                    className="grid grid-cols-1 gap-[12px] sm:hidden"
+                    className="grid grid-cols-1 gap-[28px] sm:hidden"
                 >
                     {colDefs.flat().map((item, i) => (
                         <PostCard key={i} aspectRatio={item.ar} index={i} />
@@ -180,7 +180,7 @@ export default function LabPage() {
                             whileInView="show"
                             viewport={{ once: true, amount: 0.1 }}
                             variants={container}
-                            className="flex flex-col gap-[16px]"
+                            className="flex flex-col gap-[28px]"
                         >
                             {col.map((item, i) => (
                                 <PostCard
